@@ -1,3 +1,18 @@
 <h1>
   {{title}}
 </h1>
+
+<div>
+	{{image}}
+	<p *ngFor="let book of books; let i=index"> 
+		<template [ngIf]="i<10">
+			<span>{{ book.camera }}</span>	
+			<br>
+			<span>{{ book.lens }}</span>	
+			<br>
+			<span>{{ book.image }}</span>	
+			<br>
+			<span>{{ book.photographer }}</span>	
+		</template>
+	</p>
+</div>
